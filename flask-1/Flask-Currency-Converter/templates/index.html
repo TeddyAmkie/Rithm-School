@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forex Currency Converter</title>
+    <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Forex Currency Converter</h1> {% for msg in get_flashed_messages() %}
+    <alert alert-danger> {{msg}} </alert>
+    {% endfor %}
+    <form action="submit">
+        <label name="convert-from">Convert From:</label>
+        <input name="convert-from" id="convert-currency-from">
+        <br>
+        <label name="convert-to">Convert To:</label>
+        <input name="convert-to" id="convert-currency-to">
+        <br>
+        <label name="convert-amount">Convert Amount:</label>
+        <input name="convert-amount" id="convert-currency-amount">
+        <br>
+        <button class="btn btn-primary">Convert Now</button>
+    </form>
+</div>
+</body>
+</html>
